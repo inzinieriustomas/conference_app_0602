@@ -1,0 +1,19 @@
+{% extends "base.html"%}
+{% block "title"%}
+
+Konferenciju sarasas
+
+{% block "title"%}
+
+{% block "content"%}
+
+<ol>
+    {% for conference in object_list %}
+    <li>
+        <a href=">{% url ' cenference-detail' conference.id %}" conference.title}}</a>
+        ({{conference.start_date}} - {{ conference.end_date}}
+
+    </li>
+    {{% endfo %}
+</ol>
+{% endblock %}
