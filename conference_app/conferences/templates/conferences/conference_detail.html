@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block "title" %}
+{% endblock %}
+
+{% block "content" %}
+<h1>{{object.tilte}}</h1>
+
+<div>Pradzia: {{ object.start_date}}</div>
+<div>Pabaiga: {{ object.end_date}}</div>
+
+
+<h2>renginiai:</h2>
+<ol>
+    {% for event in object.event_set.all%}
+    <li>
+        <a href = "{% url 'event-detail' event.id %}
+           {{event.title}}
+           </a>
+        ({{event.date}})
+        {% if user.is_authenticated %}
+
+        dalyvauja {{ event.visitors }}
+    </li>
+    {{%endfor%}
+</ol>
+object.event_set
+
+{%endblock%}
