@@ -13,7 +13,7 @@
 
 <div>Pradzia: {{ renginys.date}}</div>
 <div>Pabaiga: {{ renginys.date}}</div>
-<div>jau dalyvauja: {{renginys.visitors }}</div>
+<div>jau dalyvauja: {{renginys.eventregistration_set.count }}</div>
 
 <a href="/events/register/{{renginys.id}}">uzsiregistruoti</a>
 <a href="{% url 'register-visitor' renginys.id %}" >uzsiregistruoti</a>

@@ -5,6 +5,12 @@
 {% block "content" %}
 <h1>{{object.tilte}}</h1>
 
+
+{% if object.picture %}
+<img src="{{ object.picture.url}}"> height="150px">
+
+{% endif %}
+
 <div>Pradzia: {{ object.start_date}}</div>
 <div>Pabaiga: {{ object.end_date}}</div>
 
